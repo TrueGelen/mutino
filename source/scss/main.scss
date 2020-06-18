@@ -1,0 +1,1768 @@
+@import 'smart-grid';
+@import '_normalize';
+@import '_fonts';
+@import 'swiper.min.css';
+
+
+// https://vk.com/id290805503
+
+//---vars
+$text: white;
+$mainPink: #be84a3;
+
+///---------common styles ----------------------
+
+html {
+	// font-size: 20px;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+img{
+	margin: 0;
+	padding: 0;
+	width: 100%;	
+}
+
+picture{
+	display: block;
+
+	& > *{
+		vertical-align: top;
+	}
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	// list-style: none;
+	color: #fff;
+}
+
+a {
+	text-decoration: none;
+	color: #fff;
+}
+
+body, div, h1, h2, h3, h4, p, input {
+	margin: 0;
+	padding: 0;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+.container {	
+	// border: 1px solid red;
+	position: relative;
+	@include wrapper();
+
+	// @include to(1920px){
+	// 	max-width: calc(1338.5px + 60px);
+	// }
+
+	// @include sm(max-width, 93%);
+	@include xs(max-width, 100%);
+}
+
+.page{
+	position: relative;
+	// max-width: 1920px;
+}
+
+.asideColumn{
+	position: fixed;
+	z-index: 10;
+	width: 185px;
+	height: 100vh;
+	padding: 20px 0 10px 25px;
+	background-color: #fff;
+	border-right: 1px solid #e5e5e5;
+
+	@include to(1023px){
+		display: none;
+	}
+
+	& > p{
+	}
+}
+
+.pageWrap{
+	padding-left: 187px;
+
+	@include to(1023px){
+		padding-left: 0;
+	}
+}
+
+.uniqueizer11221{
+	position: relative;
+	width: 100%;
+
+	@include xs(overflow, hidden);
+
+	.upperLine{
+		position: absolute;
+		background-color: $mainPink;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: .5vw;
+
+		@include to(1023px){
+			height: 1vw;
+		}
+
+		@include xs(height, 2vw);
+	}
+
+	.titleBlock{
+		position: relative;
+		// display: inline-block;
+		font-family: Gilroy-Light, sans-serif;
+		font-size: 2.15vw;
+		line-height: 1;
+		color: white;
+
+		 @include to(1023px){
+			font-size: 2.5vw;
+		}
+		@include sm-block{
+			font-size: 3vw;
+		}
+		@include xs(font-size, 3.5vw);
+		@include xxs(font-size, 4.2vw);
+
+		&_block{
+			// border: 1px solid black;
+			position: absolute;
+			top: 11.3vw;
+			background-color: $mainPink;
+			width: 25.7vw;
+			transform: rotate(-90deg);
+			padding: .5vw 0 .5vw 1.2vw;
+			text-align: left;
+
+			@include to(1023px){
+				width: 35vw;
+				top: 16vw;
+			}
+
+			@include sm-block{
+				top: 20.5vw;
+				width: 45vw;
+				padding: 1vw 0 1vw 2vw;
+			}
+
+			@include xs-block{
+				width: 54vw;
+				top: 24.8vw;
+				padding: 1.3vw 0 1.3vw 2.5vw;
+			}
+		}
+
+		&_right{
+			right: -9.5vw;
+			@include sm(right, -17vw);
+			@include xs(right, -24.1vw);
+		}
+
+		&_left{
+			left: -9.5vw;
+			@include sm(left, -17vw);
+			@include xs(left, -24.1vw);
+		}
+	}
+
+	.mainText{
+		font-family: Gilroy-Light, sans-serif;
+		font-size: 1.13vw;
+		color: black;
+		line-height: 1.15;
+
+		@include to(1023px){
+			font-size: 1.4vw;
+		}
+		@include sm(font-size, 1.9vw);
+		@include xs(font-size, 2.4vw);
+		@include xxs(font-size, 3.2vw);
+
+		& > span{
+			font-family: Gilroy-Medium, sans-serif;
+			// font-weight: 800;
+			// color: #02b1fe;
+		}
+	}
+
+	.firstBlock{
+		// border: 1px solid black;
+		position: relative;
+		line-height: 1.15;
+		text-align: center;
+		background-color: $mainPink;
+
+		// padding: 5.2vw 0 4.2vw 0;
+
+		// @include xxs(padding, 6vw 0 4.5vw 0);
+
+
+		&__buildings{
+			width: 99.3%;		
+		}
+
+		&__container{
+			// border: 1px solid white;
+			position: absolute;
+			bottom: 3.5vw;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 100%;
+		}
+
+		&__title{
+			font-family: Gilroy-Bold, sans-serif;
+			text-transform: uppercase;
+			font-size: 3.15vw;
+			color: white;
+			line-height: 1.1;
+
+			@include to(1023px){
+				font-size: 4vw;
+			}
+
+			@include sm(font-size, 5vw);
+			@include xs(font-size, 6.5vw);
+		}
+
+		&__subtitle{
+			font-family: Gilroy-Bold, sans-serif;
+			text-transform: uppercase;
+			font-size: 1.8vw;
+			color: white;
+			margin-top: .8vw;
+
+			@include to(1023px){
+				font-size: 2.2vw;
+			}
+
+			@include sm(font-size, 2.6vw);
+
+			@include xs-block{
+				font-size: 3.2vw;
+				margin-top: 2.2vw;
+			}
+
+			@include xxs(font-size, 3.7vw);
+		}
+
+		&__arrow{
+			// border: 1px solid black;
+			position: relative;
+			cursor: pointer;
+			fill: white;
+
+			width: 2.5vw;
+			height: 2.5vw;
+			border-radius: 50%;
+			margin: 1.9vw auto 0 auto;
+
+			transition: .3s;
+
+			&:hover{
+				transform: scale(1.2);
+				box-shadow: 0px 0px 5px 0px white;
+			}
+
+			&:active{
+				transform: scale(1);
+				box-shadow: none;
+			}
+
+			@include md-block{
+				cursor: default;
+
+				&:hover{
+					transform: scale(1);
+					box-shadow: none;
+				}
+
+				&:active{
+					transform: scale(0.8);
+				}
+			}
+
+			@include to(1023px){
+				width: 4vw;
+				height: 4vw;
+			}
+
+			@include sm-block{
+				width: 5vw;
+				height: 5vw;
+			}
+
+			@include xs-block{
+				width: 6.5vw;
+				height: 6.5vw;
+				margin: 4vw auto 0 auto;
+			}
+
+			@include xs-block{
+				width: 8vw;
+				height: 8vw;
+				margin: 4vw auto 0 auto;
+			}
+		}
+	}
+
+	.tasks{
+		position: relative;
+		line-height: 1.15;
+		// background-color: $mainPink;
+
+		// padding: .5vw 0 0 0;
+
+		@include xxs(height, 75vw);
+
+		&__bg{
+			width: 100%;
+
+			@include xxs-block{
+				width: 160%;
+				margin-left: -30%;
+			}
+		}
+
+		&__content{
+			// border: 1px solid red;
+			position: absolute;
+			width: 21.47vw;
+			top: 4.8vw;
+			right: 8.5vw;
+
+			@include to(1023px){
+				width: 40vw;
+				right: 15vw;
+			}
+
+			@include sm-block{
+				width: 44vw;
+				right: 10.5vw;
+			}
+
+			@include sm-block{
+				width: 60vw;
+				right: 3vw;
+			}
+
+			@include xxs-block{
+				width: 52vw;
+				right: 5.8vw;
+			}
+		}
+
+		&__block{
+			position: relative;
+
+			@include to(1023px){
+				
+			}
+			
+			&:last-child{
+				margin-top: 3.7vw;
+			}
+
+			& > h3{
+				font-family: Gilroy-Medium, sans-serif;
+				text-transform: uppercase;
+				letter-spacing: 0.12vw;
+				font-size: 1.7vw;
+				color: $mainPink;
+
+				@include to(1023px){
+					color: black;
+				}
+
+				@include xs(font-size, 2.5vw);
+			}
+
+			& > ul{
+				list-style-type: disc;
+				// list-style-position: inside;
+				// margin-top: .4vw;
+
+				& > li{
+					margin-left: 2.7vw;
+					margin-top: .5vw;
+
+					@include to(1023px){
+						font-family: Gilroy-Medium, sans-serif;
+					}
+				}
+			}
+		}
+
+		&__blockLine{
+			// display: none;
+			// border: 1px solid blue;
+			position: absolute;			
+			left: .1vw;
+
+			@include to(1023px){
+				display: none;
+			}
+
+			&_1{
+				top: 2.22vw;
+				width: 1vw;
+			}
+
+			&_2{
+				width: .93vw;
+				top: 4.15vw;
+			}
+		}
+	}
+
+	.TA{
+		position: relative;
+		line-height: 1.15;
+		text-align: center;
+
+		&__bg{
+			width: 100%;
+		}
+
+		&__content{
+			// border: 1px solid red;
+			position: absolute;
+			width: 100%;
+			bottom: 4.5vw;
+			left: 0;
+
+			display: flex;
+			justify-content: space-around;
+		}
+
+		&__block{
+			// border: 1px solid blue;
+			position: relative;
+
+			width: 20vw;
+
+			@include sm(width, 25vw);
+			@include xs(width, 33vw);
+			
+			&:first-child{
+				color: white;
+
+				@include xs-block{
+					color: black;
+				}
+			}
+
+			& > h3{
+				font-family: Gilroy-Regular, sans-serif;
+				letter-spacing: 0.12vw;
+				font-size: 2.4vw;
+				margin-bottom: 1vw;
+
+				@include sm(font-size, 2.9vw);
+				@include xs(font-size, 3.2vw);
+				@include xxs(font-size, 4vw);
+			}
+
+			& > p{
+				// border: 1px solid yellow;
+				position: relative;
+				color: inherit;
+				font-size: .95vw;
+				width: 75%;
+				margin-top: 1vw;
+				margin-left: auto;
+				margin-right: auto;
+
+				@include to(1023px){
+					font-size: 1.4vw;
+					width: 85%;
+				}
+
+				@include sm(font-size, 1.9vw);
+				@include xs-block{
+					font-size: 2.4vw;
+					font-family: Gilroy-Medium;
+				}
+				@include xxs-block{
+					margin-top: 2vw;
+					font-size: 2.8vw;
+				}
+
+				&::before{
+					content: '';
+					display: block;
+					position: absolute;
+					top: -.5vw;
+					left: 50%;
+					transform: translateX(-50%);
+					width: .25vw;
+					height: .25vw;
+					background-color: black;
+					border-radius: 50%;
+
+					@include to(1023px){
+						width: .3vw;
+						height: 0.3vw;
+					}
+				}
+
+				&:nth-child(2){
+					margin-top: 0;
+
+					&:before{
+						display: none;
+					}
+				}
+			}
+		}
+	}
+
+	.decision{
+		position: relative;
+		line-height: 1.15;
+		// background-color: $mainPink;
+
+		// padding: .5vw 0 0 0;
+
+		@include xxs(height, 75vw);
+
+		&__bg{
+			width: 100%;
+
+			@include xxs-block{
+				width: 160%;
+				margin-left: -30%;
+			}
+		}
+
+		&__title{
+			top: 10.4vw;
+			right: -8.7vw;
+
+			@include to(1023px){
+				top: 15vw;
+			}
+
+			@include sm-block{
+				top: 19vw;
+				right: -16vw;
+			}
+
+			@include xs-block{
+				top: 23vw;
+				right: -22.3vw;
+			}
+		}
+
+		&__content{
+			// border: 1px solid yellow;
+			position: absolute;
+			top: 5.5vw;
+			left: 4.5vw;
+			width: 54vw;
+
+			@include sm(width, 77vw);
+			@include xs-block{
+				width: 84vw;
+				top: 4vw;
+				left: 3vw;
+			}
+
+			@include xxs-block{
+				width: 87vw;
+				top: 3vw;
+			}
+		}
+
+		&__p{
+			line-height: 1.3;
+		}
+
+		&__block{
+			line-height: 1.3;
+			
+			margin-top: 1.2vw;
+
+			& > h3{
+				display: inline-block;
+				background-color: $mainPink;
+				font-family: Gilroy-Light, sans-serif;
+				font-size: 1.3vw;
+				color: white;
+
+				padding: .25vw .6vw;
+
+				@include to(1023px){
+					font-size: 1.5vw;
+				}
+
+				@include sm(font-size, 1.9vw);
+				@include xs(font-size, 2.2vw);
+				@include xxs(font-size, 3vw);
+			}
+
+			& > ul{
+				// border: 1px solid black;
+				list-style-type: disc;
+				list-style-position: inside;
+
+				margin-left: .5vw;
+				margin-top: 1.1vw;
+
+				& > li{
+					// line-height: 1.4;
+					margin-top: .25vw;
+
+					&:first-child{
+						margin-top: 0;
+					}
+				}
+			}
+		}
+	}
+
+	.particularities{
+		// border: 1px solid blue;
+		position: relative;
+		line-height: 1.15;
+		text-align: center;
+		background-color: white;
+
+		height: 50.26vw;
+
+		@include sm(height, 55vw);
+		@include xs(height, 64vw);
+		@include xxs(height, 100vw);
+
+		&__content{
+			// border: 1px solid red;
+			position: absolute;			
+			left: 50%;
+			// top: 50%;
+			// transform: translate(-50%, -50%);
+			top: 5.5vw;
+			transform: translateX(-50%);			
+
+			width: 62%;
+
+			@include sm-block{
+				width: 80%;
+			}
+
+			@include xs-block{
+				width: 92%;
+				top: 3vw;
+				left: 6.5vw;
+				transform: none;
+			}
+
+			@include xxs-block{
+				top: 4vw;
+			}
+		}
+
+		.steps{
+			position: relative;
+			width: 100%;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			margin-top: 5vw;
+			margin-bottom: -2vw;
+
+			@include sm(margin-top, 3vw);
+			@include xs(margin-top, 2vw);
+
+			&__line{
+				position: absolute;
+				width: 23%;
+
+				@include xxs-block{
+					width: 40%;
+					left: 30%;
+				}
+
+				&_1{
+					top: 3.7vw;
+					left: 20%;
+
+					@include xs(left, 21.6%);
+
+					@include xxs-block{
+						top: 4.6vw;
+					}
+				}
+
+				&_2{
+					top: 3.7vw;
+					right: 20%;
+					
+					@include xs(right, 21.6%);
+					@include xxs-block{
+						top: 29.2vw;
+					}
+				}
+
+				&_4{
+					top: 17.5vw;
+					left: 20%;
+
+					@include to(1023px){
+						top: 20.5vw;
+					}
+
+					@include sm(top, 21vw);
+					@include xs-block{
+						top: 27.7vw;
+						left: 21.6%;
+					}
+
+					@include xxs-block{
+						top: 60.6vw;
+					}
+				}
+
+				&_5{
+					top: 17.5vw;
+					right: 20%;
+
+					@include to(1023px){
+						top: 20.5vw;
+					}
+
+					@include sm(top, 21vw);
+					@include xs-block{
+						top: 27.7vw;
+						right: 21.6%;
+					}
+
+					@include xxs-block{
+						display: none;
+					}
+				}
+			}
+		}
+
+		.step{
+			// border: 1px solid black;
+			position: relative;			
+			width: 27%;
+
+			margin: 2vw 0;
+
+			@include to(1023px){
+				width: 18vw;
+			}
+
+			@include sm(width, 25vw);
+			@include xs(width, 28.5vw);
+			@include xxs-block{
+				width: 43vw;
+			}
+
+			&__num{
+				position: relative;
+				background-color: $mainPink;
+				width: 3.5vw;
+				height: 3.5vw;
+				border-radius: 50%;
+
+				margin: 0 auto;
+
+				@include xs-block{
+					width: 4.5vw;
+					height: 4.5vw;
+				}
+
+				@include xxs-block{
+					width: 5.5vw;
+					height: 5.5vw;
+				}
+
+				& > p{
+					position: absolute;
+					left: 50%;
+					top: 50%;
+					transform: translate(-50%, -50%);
+					font-family: Gilroy-Medium, sans-serif;
+					color: white;
+					font-size: 1.8vw;
+
+					@include xs(font-size, 3vw);
+					@include xxs(font-size, 4.5vw);
+				}
+			}
+
+			& > p{
+				margin-top: 1.2vw;
+			}
+		}
+	}
+
+	.slider{
+		position: relative;
+		line-height: 1.15;
+
+		&__bg{
+			width: 100%;
+
+			@include xs-block{
+				width: 136%;
+				margin-left: -18%;
+			}
+		}
+
+		&__title{
+			// border: 1px solid red;
+			display: inline-block;
+			margin-right: 55.25vw;
+			margin-bottom: .5vw;
+
+			@include from(1921px){
+				margin-left: 25vw;
+				margin-right: auto;
+			}
+
+			@include to(1360px){
+				margin-right: 52.5vw;
+			}
+
+			@include elg(margin-right, 54.8vw);
+			@include to(1023px){
+				margin-right: 64.2vw;
+			}
+			@include sm(margin-right, 66.2vw);
+			@include xs(margin-right, 69vw);
+			@include xxs(margin-right, 71vw);
+		}
+
+		&__content{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 100%;
+
+			@include to(1920px){
+				text-align: right;
+			}			
+
+			@include elg-block{
+				overflow: hidden;
+			}
+		}
+
+		&__wrapperSwiper{
+			// border: 1px solid yellow;
+			position: relative;
+			width: 100%;
+
+			@include elg-block{
+				width: 130%;
+				margin-left: -15%;
+			}
+
+			@include sm-block{
+				width: 150%;
+				margin-left: -25%;
+			}
+
+			@include xs-block{
+				width: 180%;
+				margin-left: -40%;
+			}
+		}
+
+		&__border{
+			// position: absolute;
+			// top: 50%;
+			// left: 0;
+			// transform: translateY(-50%);
+			width: 100%;
+		}
+
+		&__swiper-container{
+			// border: 1px solid red;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-49.9%, -55.5%);
+			overflow: hidden;
+			cursor: pointer;
+
+			// width: 46.45%;
+			// width: 41.5vw;			
+			// height: 20.9vw;
+
+			width: 40vw;
+			height: 19.5vw;
+
+			@include elg-block{
+				width: 48vw;
+				height: 24vw;
+			}
+
+			@include to(1023px){
+				width: 58vw;
+				height: 29.75vw;
+			}
+
+			@include sm-block{
+				width: 67.5vw;
+				height: 33.7vw;
+			}
+
+			@include xs-block{
+				width: 80vw;
+				height: 40vw;
+			}
+		}
+
+		&__swiperItemsContainer{
+			position: relative;
+			align-items: center;
+			
+			@include from(1025px){
+				cursor: pointer;
+			}
+
+			& > picture{
+				// border: 1px solid red;
+				width: auto;
+				text-align: center;
+
+				& > img{
+					// border: 1px solid blue;
+					height: 100%;
+					width: auto;
+				}
+
+				&:focus{
+					outline: none;
+				}
+			}
+		}
+
+		&__buttons{
+			// border: 1px solid white;
+			position: absolute;
+			display: flex;
+			bottom: 1.5vw;
+			// right: 22.5vw;
+			right: 25%;
+
+			@include elg-block{
+				bottom: 2vw;
+			}
+
+			@include sm-block{
+				bottom: 2.5vw;
+			}
+
+			@include xs-block{
+				bottom: 2.7vw;
+				right: 23.3%;
+			}
+
+			& > img{
+				
+				&:last-child{
+					margin-left: 1.5vw;
+
+					@include to(1023px){
+						margin-left: 2.5vw;
+					}
+
+					@include xs(margin-left, 4vw);
+				}
+			}
+		}
+
+		&__btn{
+			width: 1.7vw;
+			cursor: pointer;
+
+			@include to(1023px){
+				width: 2.5vw;
+			}		
+
+			@include md-block{
+				cursor: default;
+
+				&:hover{
+					transform: scale(1);
+				}
+
+				&:active{
+					transform: scale(0.8);
+				}
+			}
+
+			@include sm(width, 3vw);
+			@include xs(width, 5vw);
+
+			&:hover{
+				transform: scale(1.2);
+			}
+
+			&:active{
+				transform: scale(1);
+			}
+		}
+	}
+
+	.results{
+		// border: 1px solid red;
+		position: relative;
+		line-height: 1.15;
+
+		@include xs(height, 85vw);
+		@include xxs(height, 115vw);
+
+		&__bg{
+			width: 100%;
+
+			@include xs-block{
+				width: 160%;
+				margin-left: -30%;
+			}
+
+			@include xxs-block{
+				width: 206%;
+				margin-left: -56%;
+			}
+		}
+
+		&__pyramid{
+			position: absolute;
+			top: 5.5vw;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 40vw;
+
+			@include to(1440px){
+				top: 3vw;
+			}
+
+			@include to(1023px){
+				top: 5vw;
+			}
+
+			@include sm-block{
+				width: 50vw;
+				top: 3vw;
+			}
+
+			@include xs-block{
+				width: 65vw;
+				top: 5vw;
+			}
+
+			@include xxs-block{
+				width: 86vw;
+			}
+		}
+
+		&__subtitle{
+			// border: 1px solid blue;
+			position: absolute;
+			top: 38.5vw;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 40vw;
+
+			font-family: Gilroy-Light;
+			color: black;
+			text-align: center;
+
+			font-size: 1.7vw;
+
+			@include to(1440px){
+				top: 35vw;
+			}
+
+			@include to(1023px){
+				top: 38vw;
+			}
+
+			@include sm-block{
+				top: 42vw;
+				font-size: 2vw;
+			}
+
+			@include xs-block{
+				top: 57vw;
+				font-size: 3vw;
+				width: 100Vw;
+			}
+
+			@include xxs-block{
+				top: 74vw;
+				font-size: 3.7vw;
+			}
+
+			& > span{
+				font-family: Gilroy-Bold, sans-serif;
+			}
+		}
+
+		&__bottom{
+			// border: 1px solid black;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 100%;
+
+			@include xs-block{
+				width: calc(100% - 30px);
+				flex-wrap: wrap;
+				left: 15px;
+			}
+		}
+
+		&__block{
+			// border: 1px solid yellow;
+			position: relative;			
+			width: 33%;
+			height: 100%;
+			padding: .5vw 0;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			@include sm-block{
+				width: auto;
+			}
+
+			@include xs-block{
+				width: 45vw;
+				justify-content: flex-start;
+				margin: 1.5vw 0;
+			}
+
+			@include xxs-block{
+				width: 46vw;
+				justify-content: flex-start;
+				margin: 2vw 0;
+			}
+
+			&:not(:first-child):before{
+				content: '';
+				display: block;
+				background-color: $mainPink;
+				position: absolute;
+				left: -1.5px;
+				top: 0;
+				width: 3px;
+				height: 100%;
+
+				@include sm-block{
+					display: none;
+				}
+			}
+
+			/* &:first-child:after{
+				content: '';
+				display: block;
+				background-color: $mainPink;
+				position: absolute;
+				right: -1.5px;
+				top: 0;
+				width: 3px;
+				height: 100%;
+			}
+
+			&:nth-child(3):before{
+				content: '';
+				display: block;
+				background-color: $mainPink;
+				position: absolute;
+				right: -1.5px;
+				top: 0;
+				width: 3px;
+				height: 100%;
+			} */
+
+			& > * {
+				// border: 1px solid black;
+			}
+
+			& > img{
+				width: 3vw;
+				transform: translateY(-3%);
+
+				margin-right: .7vw;
+
+				@include xxs(display, none);
+			}
+
+			& > h4{
+				font-family: Gilroy-Regular;
+				color: $mainPink;
+				font-size: 2.4vw;
+
+				@include to(1023px){
+					font-size: 3vw;
+				}
+				@include sm(font-size, 3.5vw);
+				@include xs(font-size, 4.5vw);
+				@include xxs(font-size, 6vw);
+			}
+
+			& > p{
+				font-family: Gilroy-Medium;
+				font-size: 1vw;
+				// width: 11vw;
+
+				@include to(1023px){
+					font-size: 1.4vw;
+				}
+				@include sm(font-size, 1.7vw);
+				@include xs-block{
+					font-size: 2.4vw;
+					margin-left: 1.5vw;
+				}
+				@include xxs(font-size, 3.2vw);
+
+				margin-left: .7vw;
+			}
+		}
+	}
+
+	.comments{
+		// border: 1px solid blue;
+		position: relative;
+		line-height: 1.15;
+		background-color: white;
+
+		padding: 3.5vw 0 0 0;
+
+		&__comments{
+			// border: 1px solid red;
+			position: relative;
+			display: flex;
+			justify-content: space-between;
+			align-items: stretch;
+
+			// width: 75vw;
+			width: 84.5%;
+			margin-left: 9.5vw;
+
+			@include elg-block{
+				width: 90%;
+				margin-left: 6.5vw;
+			}
+
+			@include to(1023px){
+				width: 86vw;
+				margin-left: 11vw;
+			}
+			
+			@include sm(margin-left, 10vw);
+			@include xs-block{
+				margin-left: 8.2vw;
+				flex-wrap: wrap;
+			}
+
+			@include xxs-block{
+				width: 89.4vw;
+			}
+		}
+
+		.comment{
+			// border: 1px solid yellow;
+			position: relative;
+			overflow: hidden;
+
+			@include xs(border, 1px solid rgb(255, 227, 238));
+			
+			&:first-child{
+				width: 39.5vw;
+
+				@include to(1023px){
+					width: 43vw;	
+				}
+
+				@include sm(width, 40vw);
+				@include xs(width, 100%);
+			}
+
+			&:last-child{
+				width: 34vw;
+
+				@include to(1023px){
+					width: 41vw;	
+				}
+
+				@include sm(width, 40vw);
+				@include xs-block{
+					width: 100%;
+					margin-top: 4vw;
+				}
+			}
+
+			&__textBlock{
+				// border: 1px solid black;
+				position: relative;
+				width: 54%;
+
+				min-height: 100%;
+				padding-bottom: 5.3vw;
+
+				@include elg(width, 63%);
+
+				@include to(1023px){
+					width: 27vw;
+				}
+
+				@include sm-block{
+					width: 100%;
+					padding-bottom: 25vw;
+				}
+
+				@include xs-block{
+					width: 65%;
+					padding-bottom: 5vw;
+					background-color: white;
+				}
+
+				@include xxs-block{
+					width: 100%;
+					padding-bottom: 50vw;
+					background: none;
+				}
+			}
+
+			&__quote{
+				// border: 1px solid red;
+				float: left;
+				width: 3.5vw;
+				margin-right: 1vw;
+
+				@include to(1023px){
+					width: 2.5vw;
+				}
+
+				@include xxs(width, 3.5vw);
+			}
+
+			&__text{
+				text-align: justify;
+				font-family: Gilroy-Light, sans-serif;
+				font-size: .9vw;
+				color: black;
+				line-height: 1.35;
+
+				@include elg(font-size, 1.1vw);
+
+				 @include to(1023px){
+					font-size: 1.3vw;
+				}
+				@include sm(font-size, 1.9vw);
+				@include xs(font-size, 2.4vw);
+				@include xxs(font-size, 3.3vw);
+			}
+
+			&__who{
+				text-align: right;
+				line-height: 1.15;
+				color: black;
+				background-color: rgba(255, 255, 255, 0.85);
+
+				margin-top: 1.3vw;
+
+				@include sm-block{
+					position: absolute;
+					bottom: 9vw;
+					left: 0;
+					// text-align: left;
+					margin-top: 0;
+					width: 60%;
+				}
+
+				@include xs-block{
+					position: relative;
+					bottom: auto;
+					width: 100%;
+					margin-top: 1vw;
+				}
+
+				@include xxs-block{
+					position: absolute;
+					bottom: 18vw;
+					left: 0;
+					// text-align: left;
+					margin-top: 0;
+					width: 65%;
+				}
+
+				& > p{
+					
+					&:first-child{
+						font-family: Gilroy-Medium, sans-serif;
+						font-size: 1vw;
+
+						@include elg(font-size, 1.1vw);
+						@include to(1023px){
+							font-size: 1.3vw;
+						}
+						@include sm(font-size, 1.9vw);
+						@include xs(font-size, 2.4vw);
+						@include xxs(font-size, 3.2vw);
+					}
+
+					&:last-child{
+						font-family: Gilroy-Light, sans-serif;
+						font-size: .9vw;
+
+						@include elg(font-size, 1.1vw);
+						@include to(1023px){
+							font-size: 1.3vw;
+						}
+						@include sm(font-size, 1.9vw);
+						@include xs(font-size, 2.4vw);
+						@include xxs(font-size, 3.2vw);
+					}
+					
+				}	
+			}
+
+			&__position{
+				position: absolute;
+				bottom: 2vw;
+				left: 0;
+				color: #d8d9d9;
+				font-size: 1.95vw;
+				line-height: .8;
+
+				@include sm(font-size, 2.5vw);
+				@include xs-block{
+					font-size: 3.5vw;
+					bottom: 0;
+				}
+				@include xxs-block{
+					font-size: 4.5vw;
+					bottom: 4vw;
+				}
+				
+				& > p{
+
+					&:first-child{
+						font-family: Gilroy-LightItalic, sans-serif;
+					}
+
+					&:last-child{
+						font-family: Gilroy-SemiBold, sans-serif;
+						text-transform: uppercase;
+					}
+				}
+			}
+
+			&__photo{
+				// border: 1px solid pink;
+				position: absolute;
+				right: 0;
+				bottom: 0;
+
+				&_1{
+					width: 40%;
+
+					@include elg(width, 37%);
+
+					@include to(1023px){
+						width: 16vw;
+					}
+
+					@include xs(width, 35%);
+				}
+
+				&_2{
+					width: 63%;
+					transform: translateY(20%);
+
+					@include elg(width, 60%);
+
+					@include to(1023px){
+						width: 23vw;
+					}
+
+					@include xs(width, 40%);
+					@include xxs(width, 50%);
+				}
+			}
+		}
+	}
+
+	/* .slider{
+		// border: 1px solid blue;
+		position: relative;
+		line-height: 1.15;
+
+		padding: 3.5vw 0 0 0;
+		@include xs(padding, 10vw 0 0 0);
+		@include xxs(padding, 12vw 0 0 0);
+
+		&__wrapperSwiper{
+			// border: 1px solid yellow;
+			position: relative;			
+			width: 100%;
+			text-align: center;
+		}
+
+		&__swiper-container{
+			// border: 1px solid red;
+			position: relative;
+			overflow: hidden;
+			cursor: pointer;
+
+			width: 54%;
+			margin: 0 auto;
+			border-radius: 30px;
+
+			@include sm(width, 84%);
+		}
+
+		&__swiperItemsContainer{
+			position: relative;
+			align-items: center;
+			
+			@include from(1025px){
+				cursor: pointer;
+			}
+
+			& > video{
+				max-height: 37.3vw;
+				padding: 0 2px;
+
+				@include sm(max-height, 50vw);
+
+				&:focus{
+					outline: none;
+				}
+			}
+		}
+
+		&__buttons{
+			// border: 1px solid red;
+			position: absolute;
+			width: 80%;
+
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			
+			display: flex;
+			justify-content: space-between;
+
+			@include sm(width, 100%);
+
+			@include from(1025px){
+
+				& > *{
+					cursor: pointer;
+				}				
+			}
+		}
+
+		&__btn{
+			width: 10%;
+
+			@include sm(width, 8%);
+
+			cursor: pointer;
+
+			&:hover{
+				transform: scale(1.2);
+			}
+
+			&:active{
+				transform: scale(1);
+			}
+
+			@include md-block{
+				cursor: default;
+
+				&:hover{
+					transform: scale(1);
+				}
+
+				&:active{
+					transform: scale(0.8);
+				}
+			}
+		}
+
+		.swiper-pagination_block{
+			position: relative;
+			text-align: center;
+			margin-top: 1vw;
+		}
+
+		.swiper-pagination-bullet{
+			opacity: 1;
+			width: 5px;
+			height: 5px;
+			background: #81878a;
+			margin: 0px .5vw;
+
+			&-active{
+				background: white;
+			}
+		}
+	} */
+
+	.team{
+		// border: 1px solid white;
+    position: relative;
+		line-height: 1.15;
+		background-color: $mainPink;
+
+		padding: 3vw 0;
+
+		&__content{
+			// border: 1px solid white;
+			width: 95%;
+			margin: 0 auto;
+		}
+
+		&__title{
+			text-align: center;
+		}
+
+    &__members{
+			// border: 1px solid blue;
+      display: flex;
+      // flex-wrap: wrap;
+			justify-content: space-between;
+
+			width: 100%;
+
+			margin-top: 2vw;
+
+			@include to(1366px){
+				flex-wrap: wrap;
+			}
+
+			@include xs(justify-content, space-around);
+		}
+	}
+
+  .member{
+		// border: 1px solid red;
+		position: relative;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+
+		color: white;
+
+		width: 12.5%;
+		padding: 0 .5vw;
+
+		@include to(1366px){
+			width: 21%;
+			margin: 1.5vw 0;
+		}
+
+		@include sm(width, 24%);
+		@include xs(width, 30%);
+		@include xxs(width, 45%);
+		
+		&__photo{
+			position: relative;
+			width: 40%;
+		}
+
+		&__textBlock{
+			// border: 1px solid yellow;
+			width: calc(60% - .5vw);
+			margin-left: .5vw;
+
+			@include sm-block{
+				width: calc(60% - 1vw);
+				margin-left: 1vw;
+			}
+
+			@include xxs-block{
+				width: calc(60% - 1.5vw);
+				margin-left: 1.5vw;
+			}
+		}
+
+		&__name{
+			font-family: Gilroy-Bold, sans-serif;
+			font-size: .8vw;
+
+			@include to(1366px){
+				font-size: 1vw;
+			}
+
+			@include to(1023px){
+				font-size: 1.4vw;
+			}
+
+			@include sm(font-size, 1.6vw);
+			@include xs(font-size, 2vw);
+			@include xxs(font-size, 3vw);
+		}
+
+		&__position{
+			font-family: Gilroy-Regular, sans-serif;
+			font-size: .6vw;
+
+			margin-top: .6vw;
+
+			@include to(1366px){
+				font-size: .8vw;
+				margin-top: 1vw;
+			}
+
+			@include to(1023px){
+				font-size: 1.1vw;
+			}
+
+			@include sm(font-size, 1.4vw);
+			@include xs(font-size, 1.8vw);
+			@include xxs-block{
+				font-size: 2.6vw;
+				margin-top: 3vw;
+			}
+		}
+	}
+
+	.imgFooter{
+		background-color: $mainPink;
+		margin-top: -2px;
+
+		& > picture{
+			width: 100%;
+		}
+	}
+}
