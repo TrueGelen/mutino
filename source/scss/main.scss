@@ -359,7 +359,7 @@ body, div, h1, h2, h3, h4, p, input {
 
 			@include xxs-block{
 				width: 160%;
-				margin-left: -30%;
+				margin-left: -35%;
 			}
 		}
 
@@ -387,7 +387,7 @@ body, div, h1, h2, h3, h4, p, input {
 
 			@include xxs-block{
 				width: 52vw;
-				right: 5.8vw;
+				right: 11vw;
 			}
 		}
 
@@ -505,6 +505,10 @@ body, div, h1, h2, h3, h4, p, input {
 
 				@include xs-block{
 					color: black;
+				}
+
+				@include xxs-block{
+					transform: translateX(8%);
 				}
 			}
 
@@ -1211,7 +1215,7 @@ body, div, h1, h2, h3, h4, p, input {
 		}
 
 		&__bottom{
-			border: 1px solid black;
+			// border: 1px solid black;
 			position: absolute;
 			bottom: 0;
 			left: 0;
@@ -1223,9 +1227,9 @@ body, div, h1, h2, h3, h4, p, input {
 			width: 100%;
 
 			@include xs-block{
-				width: calc(100% - 30px);
+				width: 89.5vw;
 				flex-wrap: wrap;
-				left: 15px;
+				left: 6vw;
 			}
 		}
 
@@ -1245,13 +1249,13 @@ body, div, h1, h2, h3, h4, p, input {
 			}
 
 			@include xs-block{
-				width: 45vw;
+				width: 44vw;
 				justify-content: flex-start;
 				margin: 1.5vw 0;
 			}
 
 			@include xxs-block{
-				width: 46vw;
+				width: 44.5vw;
 				justify-content: flex-start;
 				margin: 2vw 0;
 			}
