@@ -1,4 +1,4 @@
 import './slider'
 import './scrollTo'
-// import './parallax'
+import './parallax'
 // import './targetAudienceSection'
